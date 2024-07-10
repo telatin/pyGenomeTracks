@@ -115,6 +115,6 @@ stages:
           python -m pip install --user --upgrade twine
           python -m twine upload -r pypi dist/*
         env:
-          TWINE_USERNAME: lldelisle
-          TWINE_PASSWORD: $(TWINE_LUCILLE_PASSWORD)
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: $(PGT_TOKEN)
         displayName: 'Push to Python Package Index'
